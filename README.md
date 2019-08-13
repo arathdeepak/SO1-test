@@ -17,6 +17,7 @@ As I am not familiar with Nagios, I would use a simple shell sript to monitor th
 
 To run the script use the following command:
 
+    git clone https://github.com/arathdeepak/SO1-test.git
     /bin/bash ./ES-logMonitoring/Es-monitor.sh 
 
 This can be run as a cron or we could even use the value output as an input to `Zabbix` or other monitoring tool to trigger an alert depending on the criticality.
@@ -32,7 +33,7 @@ This can be run as a cron or we could even use the value output as an input to `
 
 Start the kubernetes pods
 
-    pwd
+    git clone https://github.com/arathdeepak/SO1-test.git
     cd deployments
     kubectl apply -f mysql-pv.yaml
     kubectl apply -f mysql-deploy.yaml
