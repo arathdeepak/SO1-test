@@ -19,7 +19,7 @@ To run the script use the following command:
 
     /bin/bash ./ES-logMonitoring/Es-monitor.sh 
 
-This can be run as a cron or we could even use the value output as an input to Zabbix or other monitoring tool to trigger an alert depending on the condition.
+This can be run as a cron or we could even use the value output as an input to `Zabbix` or other monitoring tool to trigger an alert depending on the criticality.
     
 
 ## Task 3:
@@ -34,9 +34,13 @@ This can be run as a cron or we could even use the value output as an input to Z
 
     pwd
     cd deployments
-    kubectl apply -f mysql-pv.yaml  ## Initializes a persistent storage for MysqlDB
-    kubectl apply -f mysql-deploy.yaml ## Starts Mysql instance
-    kubectl apply -f so-app-deploy.yaml  ## Deploys Spring boot code to 2 pods with HTTP custom health check for policy based auto-heal.
+    kubectl apply -f mysql-pv.yaml
+    kubectl apply -f mysql-deploy.yaml
+    kubectl apply -f so-app-deploy.yaml
+
+`kubectl apply -f mysql-pv.yaml`  ## Initializes a persistent storage for MysqlDB
+`kubectl apply -f mysql-deploy.yaml` ## Starts Mysql instance
+`kubectl apply -f so-app-deploy.yaml`  ## Deploys Spring boot code to 2 pods with HTTP custom health check for policy based auto-heal.
 
 ### TASK 3 - 6. Add CI to the deployment process
 
@@ -53,6 +57,6 @@ Example: DEV tag can have a value: `arathdeepak/users-mysql:dev`, once its promo
 
 - `Zabbix` can be installed and used as a monitoring tool.
 
-With Zabbix we can monitor the resources such as CPU, Memory, IO, etc. And on top of that we can configure custom monitors to monitor Application load, resource utilization, errors or messages inside log files, etc.
+With Zabbix, we can monitor the resources such as CPU, Memory, IO, etc. And on top of that we can configure custom monitors to monitor Application load, resource utilization, errors or messages inside log files, etc.
 
 Alerting can be configured like, phone calls (Using twelio), SMS, Mail, Slack channel alerts, etc.
