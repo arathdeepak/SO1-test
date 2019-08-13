@@ -30,7 +30,7 @@ This can be run as a cron or we could even use the value output as an input to `
     ./mvnw clean package
     docker build . -t users-mysql
 
-Start the kubernetes pods
+- Start the kubernetes pods
 
     pwd
     cd deployments
@@ -46,18 +46,18 @@ Start the kubernetes pods
 
 `kubectl apply -f so-app-deploy.yaml`  ## Deploys Spring boot code to 2 pods with HTTP custom health check for policy based auto-heal.
 
-#### TASK 3 - 6. Add CI to the deployment process
+### TASK 3 - 6. Add CI to the deployment process
 
 - A `Jenkins` needs to be setup and deployment need sto be automated with Jenkins.
 - We can use `Git Hooks` from git repository to monitor the changes and depenind on that build and deployments can be triggered.
 
-#### TASK 3 - 7. Split your deployment into prd/qa/dev environment.
+### TASK 3 - 7. Split your deployment into prd/qa/dev environment.
 
 - DEV/QA/PRD environments can be addressed with different tag names in git using `Jenkins`.
 
 Example: DEV tag can have a value: `arathdeepak/users-mysql:dev`, once its promoted to QA TAG name will get changed to QA and then to PRD. Depenind on the TAG associated with the git branch, we can set up `Jenkins` to trigger deployments and post deployment tasks to each environments. For example, if we are deploying for QA, we can add post build jobs for autamated test cases like, smoke test, etc.
 
-#### TASK 3 - 8. Please suggest a monitoring solution for your system. How would you notify an admin that the resources are scarce?
+### TASK 3 - 8. Please suggest a monitoring solution for your system. How would you notify an admin that the resources are scarce?
 
 - `Zabbix` can be installed and used as a monitoring tool.
 
