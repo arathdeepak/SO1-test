@@ -24,7 +24,7 @@ This can be run as a cron or we could even use the value output as an input to `
     
 
 ## Task 3:
-- Clone git repository to the local machine:
+Clone git repository to the local machine:
 
     pwd
     git clone https://github.com/TechPrimers/docker-mysql-spring-boot-example.git  && cd docker-mysql-spring-boot-example
